@@ -1,0 +1,7 @@
+#list of relevant document ids for a query in which the user is looking for a joke that involves or is about Arnold Schwarzenegger
+
+de3ec15a-1d9d-4ac3-b1a0-7fa8da2cb52d
+18a1d57f-247e-42a3-9098-b2b5aeb19732
+191acafb-ed51-48c5-85ad-f24e8a6a5aaa
+143463c9-0303-41b0-b2b5-9876430034a9
+f44bf329-5796-4b3c-a9d8-d098e585aeb1

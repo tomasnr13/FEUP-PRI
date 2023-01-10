@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Jokes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mystyle.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+</head>
+<style>
+    .searchbar{
+        margin-top: 50px;
+        margin-left: 430px;
+        width: 100%;
+    }
+
+    .bar{
+        border-radius: 40px;
+        box-shadow: 2px 3px 0px -2px #ccc;
+        padding:10px;
+        border:0px;
+        outline: none;
+        border-top: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        border-bottom: 1px solid #CCC;
+        width: 500px;
+    }
+
+    .bar:hover{
+        box-shadow: 3px 6px 7px -3px #ccc;
+    }
+
+    .bar:focus {
+        box-shadow: 3px 6px 7px -3px #ccc;
+    }
+
+    .search-title {
+        font-size: 100px;
+        margin-top: 150px;
+    }
+</style>
+<body>
+    <div class="text-center">
+        <h1 class="search-title">Reddit Jokes</h1>
+    </div>
+    <form action="/search" method="POST">
+        <div class="searchbar" style="margin: auto; width: 27%">
+            <input name="query" type="text submit" placeholder="Search Reddit Jokes" class="bar" required>
+        </div>
+
+        <div class="sidenav">
+            <h2>Sort</h2>
+            <input type="checkbox" id="sort_a" name="sort_a">
+            <label for="sort_a"> Sort by score asc</label><br>
+            <input type="checkbox" id="sort_d" name="sort_d">
+            <label for="sort_d"> Sort by score desc</label><br>
+            <input type="checkbox" id="sort_la" name="sort_la">
+            <label for="sort_la"> Sort by length asc</label><br>
+            <input type="checkbox" id="sort_ld" name="sort_ld">
+            <label for="sort_l_d"> Sort by length desc</label><br>
+
+            <h2>Parameters</h2>
+            <input type="checkbox" id="q_op" name="q_op">
+            <label for="q_op"> Total match </label><br>
+            <!-- <input type="number" id="n_rows" name="n_rows" value="200">
+            <label for="n_rows"> Number of rows </label><br> -->
+
+            <h2>Subreddit</h2>
+            <input type="checkbox" id="tamjokes" name="tamjokes">
+            <label for="tamjokes"> 3amjokes </label><br>
+            <input type="checkbox" id="antijokes" name="antijokes">
+            <label for="antijokes"> AntiJokes </label><br>
+            <input type="checkbox" id="jokes" name="jokes">
+            <label for="jokes"> Jokes </label><br>
+            <input type="checkbox" id="otherjokes" name="otherjokes">
+            <label for="otherjokes"> OtherJokes </label><br>
+
+            <h2>Categories</h2>
+            <input type="checkbox" id="punch" name="punch">
+            <label for="punch"> Punchline </label><br>
+            <input type="checkbox" id="dialog" name="dialog">
+            <label for="dialog"> Dialog </label><br>
+            <input type="checkbox" id="people" name="people">
+            <label for="people"> People </label><br>
+            <input type="checkbox" id="negative" name="negative">
+            <label for="negative"> Negative </label><br>
+            <input type="checkbox" id="positive" name="positive">
+            <label for="positive"> Positive </label><br>
+        </div>
+    </form>
+    <div class="text-center">
+    </div>
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+</html>

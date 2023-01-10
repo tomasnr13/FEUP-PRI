@@ -1,0 +1,77 @@
+{
+    "add-field-type": [
+        {
+            "name": "f_integer",
+            "class": "solr.IntPointField",
+            "docValues": true
+        },
+        {
+            "name":"f_subreddit",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name":"f_joke",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.ClassicFilterFactory"},
+                    {"class":"solr.KStemFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.LowerCaseFilterFactory"},
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.ClassicFilterFactory"},
+                    {"class":"solr.KStemFilterFactory"}
+                ]
+            }
+        }
+    ],
+    "add-field": [
+        {
+            "name": "score",
+            "type": "f_integer",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "subreddit",
+            "type": "f_subreddit",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "full_joke",
+            "type": "f_joke",
+            "indexed": true,
+            "stored": true
+        }
+    ]
+}

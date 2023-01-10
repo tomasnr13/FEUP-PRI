@@ -1,0 +1,3 @@
+#list of relevant document ids for a query in which the user is looking for jokes about politics
+
+

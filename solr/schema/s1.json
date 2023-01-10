@@ -1,0 +1,57 @@
+{
+    "add-field-type": [
+        {
+            "name": "f_integer",
+            "class": "solr.IntPointField",
+            "docValues": true
+        },
+        {
+            "name":"f_subreddit",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                }
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                }
+            }
+        },
+        {
+            "name":"f_joke",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                }
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                }
+            }
+        }
+    ],
+    "add-field": [
+        {
+            "name": "score",
+            "type": "f_integer",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "subreddit",
+            "type": "f_subreddit",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "full_joke",
+            "type": "f_joke",
+            "indexed": true,
+            "stored": true
+        }
+    ]
+}

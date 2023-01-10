@@ -1,0 +1,12 @@
+#list of relevant document ids for a query in which the user is looking for a joke with a punchline - question/answer
+
+103b2345-947d-4f8d-89eb-91e76aa14a36
+dcf6cea9-03e9-4d5a-9281-e05c3b1c81db
+b3b610ed-6cf3-41d9-93ab-c5316a60f1d2
+41a44718-c803-489f-95dc-32f4c5c385e2
+704b603e-c6de-4507-b9c1-146ab220b0cd
+26f32e39-71a0-4c67-a517-9ea1470b20b2
+41c26173-b3f4-40a9-ae30-3931362b7cd1
+2b431f0e-a54e-4417-9505-b92f07a6d6cd
+29be0879-4933-4695-82a6-f10ca5ea50ae
+e23121ee-c1b7-4466-8050-475f38f159e0
